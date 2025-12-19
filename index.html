@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo va a estar bien</title>
+
+  <style>
+    :root {
+      --bg-start: #2b0f1e;
+      --bg-end: #12050c;
+      --card: #1a0b13;
+      --text: #f9e9ef;
+      --muted: #d6b3c2;
+      --accent: #f3a6c8;
+      --soft: #ffd6e7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Raleway", system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(
+        circle at top,
+        var(--bg-start),
+        var(--bg-end)
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: var(--text);
+    }
+
+    .card {
+      max-width: 760px;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 214, 231, 0.08),
+        rgba(0, 0, 0, 0.25)
+      );
+      border-radius: 22px;
+      padding: 42px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+      border: 1px solid rgba(255, 214, 231, 0.15);
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      font-weight: 500;
+      margin-bottom: 18px;
+      color: var(--soft);
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 34px;
+      line-height: 1.7;
+    }
+
+    .message {
+      font-size: 1.08rem;
+      line-height: 1.95;
+    }
+
+    .message p {
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .signature {
+      margin-top: 34px;
+      font-size: 1rem;
+      color: var(--soft);
+    }
+
+    .signature span {
+      color: var(--accent);
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(255,214,231,0.18);
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Todo va a estar bien</h1>
+
+    <p class="subtitle">
+      No escribo esto para discutir, sino para que sepas cómo me siento.
+    </p>
+
+    <div class="message">
+      <p>
+        Cariño, sé que hoy fue un día muy difícil para ti.
+        Y aunque tuvimos una pequeña discusión,
+        quiero que sepas que nunca fue mi intención sumarte más peso.
+      </p>
+
+      <p>
+        A veces no reaccionamos como quisiéramos,
+        no porque no nos importe,
+        sino porque <span class="highlight">también estamos aprendiendo a manejar lo que sentimos</span>.
+      </p>
+
+      <p>
+        Yo quiero solucionar las cosas.
+        No porque todo tenga que estar perfecto,
+        sino porque me importas y me importa lo nuestro.
+      </p>
+
+      <p>
+        No necesito tener la razón.
+        Solo necesito que podamos entendernos un poco más,
+        escucharnos mejor,
+        y darnos el espacio para estar en paz.
+      </p>
+
+      <p>
+        Esto no define lo que somos.
+        Es solo un momento.
+        Y los momentos pasan cuando hay voluntad, cariño y comprensión.
+      </p>
+
+      <p>
+        De verdad todo va a estar bien.
+        Y si no lo está ahora,
+        podemos construirlo juntos con calma.
+      </p>
+    </div>
+
+    <div class="signature">
+      Con cariño,<br/>
+      <span>Sergio</span>
+    </div>
+
+    <div class="footer">
+      Mañana es un nuevo dia, lleno de sorpresas y emociones, asi son mis dias y noches esperando tus llamadas.
+    </div>
+  </div>
+
+</body>
+</html>
