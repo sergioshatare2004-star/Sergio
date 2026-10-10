@@ -1,0 +1,39 @@
+/**********************************/
+/* ESTILOS DE LA TABLA DE PRECIOS */
+/**********************************/
+.table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--white);
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.price-table caption {
+    padding: 17px;
+    color: var(--muted);
+    text-align: left;
+    font-size: 14px;
+}
+
+.price-table th,
+.price-table td {
+    padding: 15px 18px;
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+}
+
+.price-table th {
+    background: #fff8fb;
+    font-size: 14px;
+}
+
+.price-table tfoot td {
+    background: #fff8fb;
+    font-weight: 750;
+}

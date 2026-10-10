@@ -1,0 +1,86 @@
+/**********************/
+/* ESTILOS DEL HEADER */
+/**********************/
+.top-strip {
+    padding: 8px 12px;
+    background: var(--pink);
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 250, 252, .96);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(12px);
+}
+
+.nav-wrap {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.brand-name {
+    display: block;
+    font-size: 19px;
+    font-weight: 850;
+    line-height: 1.2;
+}
+
+.brand-tag {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 19px;
+}
+
+.nav-list a {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-list .nav-cta {
+    padding: 10px 15px;
+    border-radius: 999px;
+    color: var(--white);
+    background: var(--black);
+}
+
+/* Hover solo para mouse o cursor preciso */
+@media (hover: hover) and (pointer: fine) {
+    .nav-list a:hover {
+        color: var(--pink-dark);
+    }
+
+    .nav-list .nav-cta:hover {
+        color: var(--white);
+        background: var(--pink-dark);
+    }
+}

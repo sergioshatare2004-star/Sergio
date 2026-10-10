@@ -1,0 +1,31 @@
+/*********************************************/
+/* IMPORTACION DE TODAS LAS HOJAS DE ESTILOS */
+/*********************************************/
+
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/global.css");
+@import url("./base/typography.css");
+
+@import url("./utilities/layout.css");
+
+@import url("./components/buttons.css");
+@import url("./components/product-card.css");
+@import url("./components/category-card.css");
+@import url("./components/price-table.css");
+@import url("./components/form.css");
+
+@import url("./sections/header.css");
+@import url("./sections/hero.css");
+@import url("./sections/benefits.css");
+@import url("./sections/featured.css");
+@import url("./sections/catalog.css");
+@import url("./sections/categories.css");
+@import url("./sections/prices.css");
+@import url("./sections/personalization.css");
+@import url("./sections/form-section.css");
+@import url("./sections/gallery.css");
+@import url("./sections/contact.css");
+@import url("./sections/footer.css");
+
+@import url("./responsive.css");

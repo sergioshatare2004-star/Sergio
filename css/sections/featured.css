@@ -1,0 +1,12 @@
+/***************************************/
+/* ESTILOS DE LA SECCION DE DESTACADOS */
+/***************************************/
+.featured {
+    background: var(--pink-pale);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}

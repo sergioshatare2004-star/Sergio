@@ -1,0 +1,26 @@
+/********************************************/
+/* ESTILOS DE LA SECCION DE PERSONALIZACIÓN */
+/********************************************/
+.personalization {
+    background: var(--white);
+}
+
+.personalization-box {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 28px;
+    padding: 38px;
+    border-radius: 24px;
+    background: var(--pink-soft);
+}
+
+.personalization-box h2 {
+    max-width: 600px;
+}
+
+.personalization-box p {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 16px;
+}

@@ -1,0 +1,84 @@
+/*******************************************/
+/* ESTILOS DE CARDS DE PRODUCTOS DE LA WEB */
+/*******************************************/
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    background: var(--pink-pale);
+}
+
+.product-image img {
+    width: 100%;
+    aspect-ratio: 4 / 4.2;
+    object-fit: cover;
+    transition: transform .35s;
+}
+
+.product-label {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    padding: 5px 9px;
+    border-radius: 99px;
+    background: var(--white);
+    color: var(--pink-dark);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.product-info {
+    padding: 16px;
+}
+
+.product-info h3 {
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+.product-info p {
+    min-height: 42px;
+    margin-bottom: 13px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.product-price {
+    margin-bottom: 13px;
+    font-size: 19px;
+    font-weight: 850;
+}
+
+.product-price small {
+    display: block;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.product-info .btn {
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 14px;
+}
+
+/* Hover solo para mouse o cursor preciso */
+@media (hover: hover) and (pointer: fine) {
+    .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 34px #30272c0d;
+    }
+
+    .product-card:hover .product-image img {
+        transform: scale(1.035);
+    }
+}

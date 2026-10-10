@@ -1,0 +1,109 @@
+/**************************/
+/* ESTILOS DEL FORMULARIO */
+/**************************/
+.form-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: var(--white);
+}
+
+.form-card>p {
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+fieldset {
+    min-width: 0;
+    margin-bottom: 20px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+}
+
+legend {
+    padding: 0 8px;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field-full {
+    grid-column: 1 / -1;
+}
+
+.field label,
+.field-label {
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #e7d9e0;
+    border-radius: 10px;
+    outline: none;
+    background: #fffdfd;
+    color: var(--ink);
+    font-size: 15px;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px #ed70aa20;
+}
+
+.choice-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    margin-top: 7px;
+}
+
+.choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.choice input {
+    width: fit-content;
+    accent-color: var(--pink-dark);
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-note {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 13px;
+}

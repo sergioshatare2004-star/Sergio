@@ -1,0 +1,8 @@
+/******************************************************/
+/* ESTILO PARA QUITAR BORDES Y ESPACIADOS POR DEFECTO */
+/******************************************************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

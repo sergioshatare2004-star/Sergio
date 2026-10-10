@@ -1,0 +1,17 @@
+/*********************************************************************************/
+/* ROOT PARA ASIGNAR VALORES CSS EN VARIABLES Y REUTILIZARLAS EN LAS DEMAS HOJAS */
+/*********************************************************************************/
+:root {
+    --pink: #ed70aa;
+    --pink-dark: #c94d8c;
+    --pink-pale: #fff0f6;
+    --pink-soft: #f9dce9;
+    --yellow: #f5e99a;
+    --black: #30272c;
+    --muted: #766a71;
+    --white: #fff;
+    --paper: #fffafc;
+    --line: #f0e1e8;
+    --radius: 20px;
+    --max: 1180px;
+}

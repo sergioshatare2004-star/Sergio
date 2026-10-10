@@ -1,0 +1,21 @@
+/**************************************/
+/* ESTILOS DE LA SECCION DE PRODUCTOS */
+/**************************************/
+.catalog {
+    background: var(--white);
+}
+
+.catalog .products-grid {
+    row-gap: 24px;
+}
+
+.catalog-more {
+    margin-top: 36px;
+    text-align: center;
+}
+
+.catalog-more p {
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-size: 14px;
+}

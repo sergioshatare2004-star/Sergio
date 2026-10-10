@@ -1,0 +1,42 @@
+/**************************/
+/* ESTILOS DE LOS BOTONES */
+/**************************/
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 750;
+    text-align: center;
+    transition: background .2s, color .2s, border-color .2s, transform .2s;
+}
+
+.btn-primary {
+    background: var(--pink);
+    color: var(--white);
+}
+
+.btn-outline {
+    background: var(--white);
+    border-color: var(--line);
+}
+
+/* Hover solo para mouse o cursor preciso */
+@media (hover: hover) and (pointer: fine) {
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .btn-primary:hover {
+        background: var(--pink-dark);
+    }
+
+    .btn-outline:hover {
+        color: var(--pink-dark);
+        border-color: var(--pink);
+    }
+}

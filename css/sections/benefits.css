@@ -1,0 +1,34 @@
+/***************************************/
+/* ESTILOS DE LA SECCION DE BENEFICIOS */
+/***************************************/
+.benefits {
+    background: var(--white);
+    border-block: 1px solid var(--line);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 22px 0;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.benefit-icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--pink-pale);
+    color: var(--pink-dark);
+    font-size: 19px;
+}
