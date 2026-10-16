@@ -141,3 +141,9 @@
         text-align: center;
     }
 }
+
+@media (max-width: 450px) {
+    .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
