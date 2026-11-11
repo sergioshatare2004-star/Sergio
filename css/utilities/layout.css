@@ -1,0 +1,17 @@
+/*************************************/
+/* ESTILOS DE LOS CONTENEDORES PADRE */
+/*************************************/
+.container {
+    width: min(calc(100% - 36px), var(--max));
+    margin-inline: auto;
+}
+
+.section {
+    padding: 78px 0;
+}
+
+.section-head {
+    max-width: 680px;
+    margin: 0 auto 38px;
+    text-align: center;
+}

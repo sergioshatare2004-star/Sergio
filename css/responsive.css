@@ -1,0 +1,265 @@
+/************************************************/
+/* ESTILOS ADAPTABLES PARA CELULARES Y TABLETAS */
+/************************************************/
+
+/* TABLET Y DISPOSITIVOS PEQUEÑOS */
+
+@media (max-width: 1000px) {
+
+    /* HEADER */
+
+    .nav-wrap {
+        min-height: 76px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 0;
+        gap: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: grid;
+        grid-template-rows: 0fr;
+
+        background: var(--header-mobile-bg);
+        border: 1px solid transparent;
+        border-radius: 0 0 16px 16px;
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition:
+            grid-template-rows .3s ease,
+            opacity .3s ease,
+            visibility .3s ease,
+            border-color .3s ease;
+    }
+
+    .main-navigation .nav-list {
+        min-height: 0;
+        overflow: hidden;
+
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 0;
+
+        padding: 0 20px;
+    }
+
+    .main-navigation.open {
+        grid-template-rows: 1fr;
+        visibility: visible;
+        opacity: 1;
+        border-color: var(--line);
+    }
+
+    .main-navigation.open .nav-list {
+        padding: 12px 20px 20px;
+    }
+
+    .main-navigation .nav-list a {
+        display: block;
+        padding: 12px 0;
+    }
+
+    .main-navigation .nav-list .nav-cta {
+        display: block;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    /* HERO */
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+    /* PRODUCTOS */
+
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: min(calc(100% - 26px), var(--max));
+    }
+
+    /* HEADER */
+
+    .nav-wrap {
+        min-height: 72px;
+    }
+
+    .brand img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .brand-name {
+        font-size: 17px;
+    }
+
+    .brand-tag {
+        font-size: 12px;
+    }
+
+    /* SECCIONES */
+
+    .section {
+        padding: 56px 0;
+    }
+
+    /* HERO */
+
+    .hero {
+        padding: 42px 0 48px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-copy {
+        font-size: 16px;
+    }
+
+    .hero-photo {
+        padding: 9px;
+    }
+
+    .hero-swiper .swiper-slide img {
+        height: 310px;
+    }
+
+    .photo-note {
+        right: 0;
+        bottom: 45px;
+    }
+
+    /* BENEFICIOS */
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .benefit {
+        justify-content: flex-start;
+    }
+
+    /* PRODUCTOS */
+
+    .products-grid {
+        gap: 12px;
+    }
+
+    .product-info {
+        padding: 11px;
+    }
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+    .product-info p {
+        min-height: 58px;
+        font-size: 13px;
+    }
+
+    .product-info .btn {
+        font-size: 12px;
+    }
+
+    .product-price {
+        font-size: 17px;
+    }
+
+    .product-price small {
+        font-size: 12px;
+    }
+
+    /* CATEGORÍAS */
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* PERSONALIZACIÓN */
+
+    .personalization-box {
+        grid-template-columns: 1fr;
+        padding: 25px 20px;
+    }
+
+    /* FORMULARIO */
+
+    .form-card {
+        padding: 17px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .field-full {
+        grid-column: auto;
+    }
+
+    /* GALERÍA */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    /* PRECIOS */
+
+    .price-table th,
+    .price-table td {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    /* FOOTER */
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 450px) {
+
+    .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+}

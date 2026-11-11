@@ -1,0 +1,19 @@
+/*************************************/
+/* ESTILOS DE LA SECCION DE CONTACTO */
+/*************************************/
+.contact {
+    padding: 70px 0;
+    background: var(--paper);
+    text-align: center;
+}
+
+.contact-inner {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.contact p {
+    margin: 0 auto 24px;
+    color: var(--muted);
+    font-size: 16px;
+}

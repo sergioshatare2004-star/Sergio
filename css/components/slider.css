@@ -1,0 +1,315 @@
+/*********************************************/
+/* ESTILOS PARA SWIPER V11 (SLIDERS)         */
+/*********************************************/
+
+/* 1. SLIDER DE IMAGEN EN EL HERO (INICIO) */
+
+.hero-photo {
+    min-width: 0;
+    /* Evita que CSS Grid expanda el contenedor más de lo debido */
+    position: relative;
+}
+
+.hero-swiper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bloque degradado semitransparente inferior para la paginación del Hero */
+
+.hero-swiper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: 5;
+}
+
+.hero-swiper .swiper-pagination {
+    z-index: 6;
+}
+
+/* Estilos y centrado perfecto para las flechas personalizadas del Hero */
+
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    width: var(--swiper-arrow-size);
+    height: var(--swiper-arrow-size);
+    box-shadow: var(--swiper-arrow-shadow);
+    color: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 6;
+}
+
+.hero-swiper .swiper-button-prev {
+    left: 15px;
+}
+
+.hero-swiper .swiper-button-next {
+    right: 15px;
+}
+
+
+/* 2. SLIDERS DE PRODUCTOS (DESTACADOS Y CATÁLOGO) */
+
+.destacados-swiper,
+.productos-swiper {
+    width: 100%;
+    padding: 10px 5px 45px 5px;
+    /* Espacio inferior para la paginación y sombras */
+    cursor: grab;
+}
+
+.destacados-swiper:active,
+.productos-swiper:active {
+    cursor: grabbing;
+}
+
+/* Ajuste para que las tarjetas mantengan la misma altura dentro del carrusel */
+
+.swiper-slide.product-card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+/* 3. CONTENEDOR ENVOLVENTE PARA LAS FLECHAS */
+
+.slider-container {
+    position: relative;
+    padding: 0 40px;
+    /* Margen a los lados para que las flechas no pisen las tarjetas */
+}
+
+/* Posicionamiento y centrado de las flechas fuera del carrusel de productos */
+
+.slider-container .swiper-button-prev,
+.slider-container .swiper-button-next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    width: var(--swiper-arrow-size);
+    height: var(--swiper-arrow-size);
+    box-shadow: var(--swiper-arrow-shadow);
+    color: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.slider-container .swiper-button-prev {
+    left: -5px;
+}
+
+.slider-container .swiper-button-next {
+    right: -5px;
+}
+
+
+/* OCULTAR PSEUDOELEMENTOS PREDETERMINADOS DE SWIPER */
+
+.hero-swiper .swiper-button-prev::after,
+.hero-swiper .swiper-button-next::after,
+.slider-container .swiper-button-prev::after,
+.slider-container .swiper-button-next::after,
+.modal-swiper .swiper-button-prev::after,
+.modal-swiper .swiper-button-next::after {
+    content: '';
+    display: none;
+}
+
+
+/* VIÑETAS DE PAGINACIÓN */
+
+.swiper-pagination-bullet {
+    background: var(--swiper-bullet);
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--pink) !important;
+    opacity: 1;
+}
+
+
+/*********************************************/
+/* ESTILOS PARA EL MODAL DE GALERÍA (LIGHTBOX) */
+/*********************************************/
+
+.image-modal {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bg);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Clase que se activa con JS para mostrar el modal con animación */
+
+.image-modal.is-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Ocupa el 100% de la pantalla sin márgenes */
+
+.modal-swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.image-modal.is-open .modal-swiper {
+    transform: scale(1);
+}
+
+.modal-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    /* Sin padding lateral */
+    box-sizing: border-box;
+}
+
+/* Se adapta al 100% de ancho o alto según la orientación de la imagen */
+
+.modal-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Evita deformaciones manteniendo proporción */
+    display: block;
+}
+
+/* Botón de cerrar con alto contraste y diseño circular */
+
+.image-modal .modal-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    color: var(--white);
+    font-size: 28px;
+    font-weight: bold;
+    background-color: var(--modal-control-bg);
+    border: 1px solid var(--modal-control-border);
+    border-radius: 50%;
+    width: var(--modal-control-size);
+    height: var(--modal-control-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10002;
+    backdrop-filter: blur(4px);
+    box-shadow: var(--modal-control-shadow);
+    transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Flechas de navegación flotantes dentro del modal */
+
+.modal-swiper .swiper-button-prev,
+.modal-swiper .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--modal-control-bg);
+    border: 1px solid var(--modal-control-border);
+    border-radius: 50%;
+    width: var(--modal-control-size);
+    height: var(--modal-control-size);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    z-index: 10001;
+    box-shadow: var(--modal-control-shadow);
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.modal-swiper .swiper-button-prev {
+    left: 20px;
+}
+
+.modal-swiper .swiper-button-next {
+    right: 20px;
+}
+
+
+/* HOVER SOLO PARA MOUSE O CURSOR PRECISO */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .hero-swiper .swiper-button-prev:hover,
+    .hero-swiper .swiper-button-next:hover {
+        transform: translateY(-50%) scale(1.1);
+        background-color: var(--pink-pale);
+    }
+
+    .slider-container .swiper-button-prev:hover,
+    .slider-container .swiper-button-next:hover {
+        transform: translateY(-50%) scale(1.1);
+        background-color: var(--pink-pale);
+    }
+
+    .image-modal .modal-close:hover {
+        background-color: var(--pink);
+        border-color: var(--pink);
+        color: var(--white);
+        transform: scale(1.05);
+    }
+
+    /* Efecto hover para las flechas del modal */
+
+    .modal-swiper .swiper-button-prev:hover,
+    .modal-swiper .swiper-button-next:hover {
+        background-color: var(--pink);
+        border-color: var(--pink);
+        color: var(--white);
+        transform: translateY(-50%) scale(1.05);
+    }
+}

@@ -1,0 +1,94 @@
+/***********************************/
+/* ESTILOS DE LA SECCION PRINCIPAL */
+/***********************************/
+
+.hero {
+    padding: 64px 0 72px;
+    overflow: hidden;
+    background: radial-gradient(circle at 86% 18%, var(--pink-soft) 0, transparent 31%), var(--paper);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 58px;
+}
+
+.hero h1 {
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--pink-dark);
+}
+
+.hero-copy {
+    max-width: 500px;
+    margin-bottom: 26px;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-bottom: 20px;
+}
+
+.hero-note {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.hero-photo {
+    position: relative;
+    padding: 15px;
+    border-radius: 30px;
+    background: var(--pink-pale);
+    min-width: 0;
+    /* Evita que el grid expanda de más el contenedor del slider */
+}
+
+/* ESTILOS ESPECÍFICOS PARA EL SWIPER DENTRO DEL HERO */
+
+.hero-swiper {
+    width: 100%;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.hero-swiper .swiper-slide img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+    border-radius: 22px;
+}
+
+/* NOTA FLOTANTE SOBRE LA IMAGEN */
+
+.photo-note {
+    position: absolute;
+    right: -10px;
+    bottom: 50px;
+    max-width: 220px;
+    padding: 14px 17px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: var(--white);
+    box-shadow: var(--hero-note-shadow);
+    font-size: 15px;
+    font-weight: 800;
+    z-index: 10;
+    /* Asegura que la nota flote por encima del slider si es necesario */
+}
+
+.photo-note small {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 400;
+}

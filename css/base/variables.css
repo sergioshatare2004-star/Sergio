@@ -1,0 +1,56 @@
+/*********************************************************************************/
+/* ROOT PARA ASIGNAR VALORES CSS EN VARIABLES Y REUTILIZARLAS EN LAS DEMAS HOJAS */
+/*********************************************************************************/
+:root {
+    /* COLORES PRINCIPALES */
+    --pink: #ed70aa;
+    --pink-dark: #c94d8c;
+    --pink-pale: #fff0f6;
+    --pink-soft: #f9dce9;
+    --yellow: #f5e99a;
+
+    /* COLORES NEUTROS */
+    --black: #30272c;
+    --ink: #30272c;
+    --muted: #766a71;
+    --white: #fff;
+    --paper: #fffafc;
+    --line: #f0e1e8;
+
+    /* HEADER */
+    --header-bg: rgba(255, 250, 252, .96);
+    --header-mobile-bg: rgba(255, 250, 252, .98);
+    --header-blur: 12px;
+
+    /* HERO */
+    --hero-note-shadow: 0 12px 30px #30272c12;
+
+    /* FORMULARIOS */
+    --input-bg: #fffdfd;
+    --input-border: #e7d9e0;
+    --input-radius: 10px;
+    --input-focus-shadow: 0 0 0 3px #ed70aa20;
+
+    /* TABLA DE PRECIOS */
+    --table-bg: #fff8fb;
+
+    /* CARDS DE PRODUCTOS */
+    --product-shadow: 0 14px 34px #30272c0d;
+
+    /* SWIPER - NAVEGACIÓN */
+    --swiper-arrow-size: 40px;
+    --swiper-arrow-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --swiper-bullet: #ccc;
+
+    /* MODAL DE GALERÍA */
+    --modal-bg: rgba(0, 0, 0, 0.95);
+    --modal-control-bg: rgba(0, 0, 0, 0.6);
+    --modal-control-border: rgba(255, 255, 255, 0.2);
+    --modal-control-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    --modal-control-size: 50px;
+
+    /* BORDES Y DIMENSIONES */
+    --radius: 20px;
+    --radius-sm: 10px;
+    --max: 1180px;
+}

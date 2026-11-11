@@ -1,0 +1,19 @@
+/***************************************/
+/* ESTILOS DE LA SECCION DE DESTACADOS */
+/***************************************/
+.featured {
+    background: var(--pink-pale);
+}
+
+/* Contenedor del slider en destacados */
+.destacados-swiper {
+    width: 100%;
+    padding: 10px 5px 45px 5px;
+}
+
+/* Mantiene el estilo grid por si lo reutilizas en otra sección sin slider */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
